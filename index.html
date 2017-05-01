@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>Theme (Molokai)</title>
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+   
+    <div class="card horizontal blue-grey darken-3">
+        <div class="card-image">
+        <img title="Sam F - Limitless" src="welcome.png" onclick="StartOrStop('https://puu.sh/vBUTB/04da21631b.mp3')">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+            <h5 class="white-text">Theme</h5>
+            
+            <div class="row">
+                <!--First column-->
+                <div class="col s3">
+                    <a href="" class="white-text"><div><u>Theme Statement:</u><br> Our Choices Determines Our Life
+                        <br>
+                        <br>
+                        <br>
+                    <-- Soundtrack CLICK PIC
+					</div></a>
+                </div>
+                
+                <!--Second column-->
+                <div class="col s3">
+                </div>
+
+                <!--Third column-->
+                <div class="col s3">
+                    <a class="white-text"><div><u>Found Poem:
+					</u></div></a>
+                    <p class="white-text"> A meal of her flesh
+                        Feasting merely on nerves
+                        Her skin became lax
+                        Erupted in ugly purple bruises
+                        Nasal passages swelled
+                        Painful to breathe from her nose
+                        Her voice became chronically hoarse
+                        Tonsils had to be removed
+                        Hard to summon the strength needed to fight
+                        Harder to care whether she lived or died
+                    </p>
+                </div> 
+            </div> 
+                
+            </div>
+        </div>
+    </div>
+    <audio id="myAudio"></audio>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="materialize.min.js"></script>
+    <script>
+        function StartOrStop(audioFile) {
+    var audie = document.getElementById("myAudio");
+    if (!audie.src || audie.src !== audioFile) audie.src = audioFile; // check if there's a src already and if the current src is not the same with the new one, change it. Or don't do anything.
+    if (audie.paused == false)
+        audie.pause();
+    else
+        audie.play();
+}
+    </script>
+    </body>
+</html>
